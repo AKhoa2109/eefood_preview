@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RecipeError from "./components/recipe/RecipeError";
 import ReviewRecipe from "./pages/ReviewRecipe";
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
       <Routes>
         <Route path="/recipes/:recipeId" element={<ReviewRecipe />} />
 
-        <Route path="*" element={<ReviewRecipe />} />
+        <Route path="*" element={<RecipeError />} />
       </Routes>
     </BrowserRouter>
   );
